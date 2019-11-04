@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firebasics-476c2": {
+      "hosting": {
+        "tictactoe": [
+          "firebasics-476c2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "staging": "firebasics-476c2"
+  }
+}
