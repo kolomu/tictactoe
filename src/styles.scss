@@ -1,1 +1,20 @@
+@import 'themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+};
 /* You can add global styles to this file, and also import other style files */
+
+
+.nb-theme-dark [nbButton].appearance-hero.status-success:focus,
+.nb-theme-dark [nbButton].appearance-hero.status-info:focus,
+.nb-theme-dark [nbButton]:focus {
+  box-shadow: none !important;
+}
+
+.nb-theme-dark [nbButton].appearance-filled.status-primary:active {
+  background-color: #3366ff;
+  border-color: #3366ff;
+}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-board',
@@ -29,6 +28,9 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(idx: number) {
+    if(this.winner) {
+     this.newGame(); 
+    }
     if (!this.squares[idx]) {
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
@@ -48,7 +50,7 @@ export class BoardComponent implements OnInit {
       [0, 4, 8],
       [2, 4, 6],
     ];
-    
+
     for (let i = 0; i < lines.length; i++) {
       const [a, b, c] = lines[i];
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
